@@ -11,14 +11,6 @@ public class Main {
    }
    public static void hanoi(int topN, String from, String to, String inter) {
       
-	  /*if (topN == 1){
-	         System.out.println("Moving Disk " + topN + " from " + from + " to " + to);
-      }else {
-    	 hanoi(topN - 1, from, inter, to);
-         System.out.println("Moving Disk " + topN + " from " + from + " to " + to);
-         hanoi(topN - 1, inter, to, from);
-      }*/
-      
       if(topN != 0){
      	 hanoi(topN - 1, from, inter, to);
          //System.out.println("Moving Disk " + topN + " from " + from + " to " + to);
