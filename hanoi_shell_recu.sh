@@ -1,10 +1,7 @@
 #@author Maxime Clement & Johan Dufaux & Antoine Philippe
 
-#jobs &>/dev/null java -cp Hanoi/Java/Recursive/bin Main 30 &
-javac Hanoi/Java/Main.java
-
 jobs &>/dev/null 
-java -cp Hanoi/Java Main $1 &
+Hanoi/Shell/Recursive/hanoi.sh $1 &
 new_job_started="$(jobs -n)"
 if [ -n "$new_job_started" ];then
     VAR=$!
@@ -13,4 +10,4 @@ else
 fi
 echo $VAR
 ./powerapi-iagl-3.3/bin/powerapi 84 100 $VAR
-mv powerapi.out powerapi_hanoi_java_recu.out
+mv powerapi.out powerapi_hanoi_shell_recu.out
