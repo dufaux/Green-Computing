@@ -1,9 +1,9 @@
 #@author Maxime Clement & Johan Dufaux & Antoine Philippe
 
-gcc Hanoi.c -O3 -o Hanoi_O3 $1 &
+gcc Hanoi.c -O3 -o Hanoi_O3
 jobs &>/dev/null
 chmod 700 Hanoi
-./Hanoi_O3 &
+./Hanoi_O3 $1 &
 new_job_started="$(jobs -n)"
 if [ -n "$new_job_started" ];then
     VAR=$!

@@ -13,14 +13,16 @@ void hanoi(int disk_number, int start, int end, int intermediate){
 
 }
 
-void main(){
+void main(int argc, char* argv[]){
 	// int error;
 	// printf("%d\n", getpid());
 	// error = system("powerapi/bin/powerapi 84 " + getpid());
 	// printf("%d\n", error);
 	// clock_t start = clock(), diff;
-	hanoi(33, 0, 2, 1);
+        printf("init hanoi with %d \n",atoi(argv[1]));
+	hanoi(atoi(argv[1]), 0, 2, 1);
 	// diff = clock() - start;
 	// int msec = diff * 1000 / CLOCKS_PER_SEC;
-	// printf("Time taken %d seconds %d milliseconds\n", msec/1000, msec%1000);
+	//printf("Time taken %d seconds %d milliseconds\n", msec/1000, msec%1000);
+        printf("end of C program");
 	}
