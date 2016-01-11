@@ -1,6 +1,6 @@
 #@author Maxime Clement & Johan Dufaux & Antoine Philippe
 
-java Hanoi.java &
+javac Hanoi.java
 jobs &>/dev/null 
 java Hanoi $1 &
 new_job_started="$(jobs -n)"

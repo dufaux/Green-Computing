@@ -6,8 +6,9 @@ function hanoi(disk_number, start, end, intermediate){
 	}
 }
 
+//console.log("process.argv[2] ="+process.argv[2]);
 var start = new Date().getTime();
-hanoi(30, 0,2, 1);
+hanoi(process.argv[2], 0,2, 1);
 var end = new Date().getTime();
 var time = end - start;
 console.log('Execution time: ' + time + " ms");
